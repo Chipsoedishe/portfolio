@@ -1,0 +1,61 @@
+section.business {
+  padding-block: 4rem;
+  background: linear-gradient(
+    188deg,
+    transparent 40%,
+    hsl(51, 70%, 50%) 40%,
+    hsl(51, 40%, 50%)
+  );
+  & .container {
+    display: flex;
+    gap: 30px;
+    position: relative;
+  }
+  & .block {
+    flex-basis: 50%;
+    flex-grow: 1;
+    min-width: 0;
+    &.left {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 1px solid hsl(51, 20%, 50%);
+      box-shadow: 0.5rem 0.5rem 0 hsl(51, 20%, 50%);
+    }
+  }
+
+  & h2 {
+    margin-bottom: 1em;
+  }
+
+  & img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  section.business {
+    & .block.right {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: -50px;
+      right: 40px;
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  section.business {
+    & .container {
+      flex-wrap: wrap;
+    }
+
+    & .block.right {
+      position: absolute;
+      width: 75px;
+      height: 75px;
+      top: -25px;
+      right: 30px;
+    }
+  }
+}

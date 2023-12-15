@@ -1,0 +1,16 @@
+section.feedback {
+  padding-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-image: linear-gradient(
+    0deg,
+    hsl(51, 70%, 50%) 40%,
+    hsl(51, 40%, 50%)
+  );
+
+  & h2 {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,43 @@
+section.options {
+  padding: 4rem 0px;
+  background: linear-gradient(
+    -8deg,
+    transparent 40%,
+    hsl(51, 70%, 50%) 40%,
+    hsl(51, 40%, 50%)
+  );
+
+  & h2 {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  & .cards {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  & article {
+    flex-basis: 300px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    background-color: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    border: 0.5rem solid hsl(51, 70%, 50%);
+    & h3 {
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    & hr {
+      width: 4rem;
+      margin: auto;
+      margin-bottom: 0.5rem;
+      border-color: hsl(51, 70%, 50%);
+    }
+  }
+}

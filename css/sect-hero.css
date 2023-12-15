@@ -1,0 +1,123 @@
+section.hero {
+  position: relative;
+  background: linear-gradient(45deg, yellow, red, green);
+}
+
+section.hero .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+section.hero h1 {
+  font-size: 100px;
+  color: #fff;
+  margin-bottom: 0.5em;
+  text-shadow: 7px 7px #ffffff9d;
+}
+
+section.hero .decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+section.hero .circle1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: circle1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes circle1 {
+  0% {
+    top: 0;
+    left: 0;
+  }
+
+  100% {
+    top: 100%;
+    left: 100%;
+  }
+}
+
+section.hero .triangle {
+  position: absolute;
+  inset: 50%;
+  animation-name: triangle;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+}
+
+section.hero .triangle path {
+  animation-name: color;
+  animation-duration: 5s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes triangle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color {
+  0% {
+    fill: #fff;
+  }
+
+  100% {
+    fill: #03588a;
+  }
+}
+
+section.hero .octagon {
+  position: absolute;
+  top: 68%;
+  left: 20%;
+  animation-name: octagon;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: inherit;
+}
+
+@keyframes octagon {
+  0% {
+    transform: rotate(60deg);
+  }
+
+  100% {
+    transform: rotate(275deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  section.hero {
+    .button {
+      align-self: flex-start;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  section.hero {
+    & h1 {
+      font-size: 3rem;
+    }
+  }
+}
